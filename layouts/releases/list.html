@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="markdown book-article">
+  {{ .Content }}
+  {{ range .RegularPages.ByDate.Reverse }}
+  <section class="release-summary">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .Draft }} <small>Черновик</small>{{ end }}</h2>
+    <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02.01.2006" }}</time></p>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </section>
+  {{ else }}
+  <p class="empty-state">Публичных релизов пока нет. Здесь появятся заметки о следующих обновлениях.</p>
+  {{ end }}
+  <p><a href="{{ "releases/index.xml" | relURL }}">Подписаться на релизы по RSS →</a></p>
+</article>
+{{ end }}

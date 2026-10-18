@@ -1,0 +1,37 @@
+# Local preview uses a dedicated port; change this when deploying.
+# For deployment: hugo --baseURL https://docs.YOUR-DOMAIN/
+baseURL = 'http://localhost:1314/'
+title = 'Полка'
+theme = 'hugo-book'
+locale = 'ru-RU'
+defaultContentLanguage = 'ru'
+timeZone = 'Europe/Minsk'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+
+[languages.ru]
+  label = 'Русский'
+  locale = 'ru-RU'
+  weight = 1
+
+[params]
+  BookBrand = 'polka.antomal.com'
+  description = 'Публичные документы, ответы на вопросы и новости Полки.'
+  BookTheme = 'light'
+  BookSection = '/'
+  BookToC = true
+  BookSearch = true
+  BookComments = false
+  BookBreadcrumbs = true
+  BookDateFormat = '02.01.2006'
+  BookServiceWorker = false
+  BookPortableLinks = false
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+
+[outputs]
+  home = ['HTML']
+  section = ['HTML']
+

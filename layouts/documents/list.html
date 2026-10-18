@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="markdown book-article">
+  {{ .Content }}
+  {{ $documents := where .RegularPages "Params.bookHidden" "ne" true }}
+  {{ if $documents }}
+  <ul>
+    {{ range $documents.ByWeight }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .Draft }} — черновик{{ end }}{{ with .Params.effectiveDate }} · Действует с {{ time.Format "02.01.2006" . }}{{ end }}</li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p class="empty-state">Документы готовятся к публикации. Действующие редакции появятся в этом разделе.</p>
+  {{ end }}
+</article>
+{{ end }}

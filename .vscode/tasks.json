@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Hugo: Serve Polka Docs",
+      "type": "shell",
+      "command": "hugo",
+      "args": [
+        "server",
+        "--environment",
+        "development",
+        "--bind",
+        "127.0.0.1",
+        "--port",
+        "1314",
+        "--renderToMemory",
+        "--buildDrafts"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false,
+        "focus": false
+      }
+    }
+  ]
+}

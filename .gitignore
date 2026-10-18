@@ -1,0 +1,33 @@
+# Hugo output and generated caches
+/public/
+/resources/_gen/
+/.hugo_cache/
+/.hugo_build.lock
+/hugo_stats.json
+/assets/jsconfig.json
+
+# Local previews and temporary files
+/.tmp-preview/
+/temp/
+dist
+node_modules/
+tmp
+
+# Local environment files
+.env
+.env.*
+!.env.example
+.smart-env
+
+# Google Drive temporary files
+.tmp.drivedownload
+.tmp.driveupload
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/*
+!.vscode/tasks.json
+.idea/

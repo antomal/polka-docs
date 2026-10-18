@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Onest';
+  src: url('/fonts/Onest.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Onest', Arial, sans-serif;
+  font-synthesis: none;
+}
+
+.markdown {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  font-weight: 750;
+}
+
+.markdown h1 {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.markdown h3 {
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.markdown strong {
+  font-weight: 750;
+}
+
+.markdown a[href] {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.markdown blockquote {
+  border-inline-start: 2px solid currentColor;
+  border-radius: 0;
+}
+
+.book-brand {
+  font-size: 1.125rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.book-menu .book-brand {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 56rem) {
+  .book-header > .flex {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr) 2rem;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  .book-header .book-brand {
+    justify-self: center;
+    min-width: 0;
+  }
+
+  .book-header label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .book-header label .book-icon {
+    display: block;
+    flex-shrink: 0;
+  }
+}
+
+.release-summary {
+  padding-block: 0.5rem 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.release-summary time,
+.release-summary small {
+  font-size: 0.875rem;
+}
